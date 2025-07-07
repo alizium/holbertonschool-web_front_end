@@ -1,4 +1,3 @@
-
 # Techium - Projet HTML de base
 
 Bienvenue dans le projet **Techium**, une fausse entreprise qui va nous permettre d’apprendre à créer des pages web **uniquement avec HTML** (pas de CSS).
