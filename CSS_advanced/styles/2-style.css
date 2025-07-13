@@ -1,0 +1,44 @@
+/*
+- Donner une couleur de texte (color) au body
+
+- Donner la même couleur de texte à tous les liens (a)
+
+- Cacher tous les éléments qui ont la classe .visually-hidden
+
+- Donner une couleur spécifique à tous les éléments avec la classe .card-category
+
+- Et la même couleur à ceux qui ont la classe .section-tagline
+
+
+Le sélecteur (body, a, .ma-classe) désigne les éléments ciblés
+
+La propriété (color, display) indique quoi changer
+
+La valeur est ce qu’on applique (#161616, none…)
+*/
+
+/* Le texte de tout le corps de la page sera #161616 (gris très foncé) */
+body {
+  color: #161616;
+}
+
+/* Tous les liens (balises <a>) auront aussi cette couleur */
+a {
+  color: #161616;
+}
+
+/* On cache complètement les éléments avec la classe .visually-hidden 
+display none = l'élément est totalement caché */
+.visually-hidden {
+  display: none;
+}
+
+/* Tous les éléments avec la classe .card-category auront une couleur rose foncé */
+.card-category {
+  color: #D73953;
+}
+
+/* Même chose pour les éléments avec la classe .section-tagline */
+.section-tagline {
+  color: #D73953;
+}
