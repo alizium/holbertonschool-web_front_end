@@ -1,0 +1,20 @@
+/* Toutes les règles précédentes restent valides (du fichier 23-style.css) */
+
+/* Titre dans les cartes de service : on retire toute marge */
+.card-services .card-title {
+  margin: 0; /* Supprime la marge du titre dans les cartes de service */
+}
+
+/* Lien dans les cartes de service : style de bloc avec padding et fond gris clair */
+.card-services a {
+  display: block;                      /* Le lien prend toute la largeur disponible */
+  padding: 2rem;                       /* Padding de 2 fois la taille de l’élément racine */
+  background-color: var(--color-light-grey); /* Fond gris clair */
+}
+
+/* État survolé du lien dans les cartes de service */
+.card-services a:hover {
+  color: var(--color-white);           /* Texte blanc */
+  background-color: var(--color-primary); /* Fond de couleur principale (rouge par défaut) */
+  text-decoration: none;              /* Supprime le soulignement du lien */
+}

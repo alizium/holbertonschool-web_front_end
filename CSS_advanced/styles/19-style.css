@@ -1,0 +1,42 @@
+/* Variable personnalisée pour retirer la marge de section-tagline */
+:root {
+  --section-tagline-margin: 0;
+}
+
+/* Supprime les marges sur l'élément section-tagline */
+.section-tagline {
+  margin: var(--section-tagline-margin);
+}
+
+/* Pour tous les ul avec la classe row */
+ul.row {
+  margin: 0;           /* Supprime toutes les marges */
+  padding: 0;          /* Supprime tous les paddings */
+  list-style: none;    /* Supprime les puces par défaut */
+}
+
+/* Colonne qui prend 1/3 de la largeur du parent */
+.col-1-3 {
+  width: 33.33%;       /* 1/3 de la largeur totale */
+  float: left;         /* Aligne les éléments horizontalement */
+  padding: 0.5rem;     /* Espace interne sur tous les côtés */
+}
+
+/* Colonne qui prend la moitié du parent */
+.col-1-2 {
+  width: 50%;          /* 1/2 de la largeur totale */
+  float: left;         /* Aligne les éléments horizontalement */
+  padding: 0.5rem;     /* Espace interne sur tous les côtés */
+}
+
+/* Pied de page : droits d'auteur */
+.footer-copyright {
+  margin: 0;                             /* Supprime toutes les marges */
+  font-size: var(--font-size-small);     /* Texte plus petit */
+  color: var(--text-color);              /* Couleur du texte */
+}
+
+/* Tous les ul dans un footer auront le texte aligné à droite */
+footer ul {
+  text-align: right;
+}

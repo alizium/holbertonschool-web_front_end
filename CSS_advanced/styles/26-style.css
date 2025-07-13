@@ -1,0 +1,18 @@
+/* Sélectionne la carte "testimonial" et centre le texte */
+.card-testimonial {
+  text-align: center; /* Centre tout le texte dans la carte */
+}
+
+/* Sélectionne l’élément avatar dans la carte testimonial */
+.card-testimonial .card-avatar {
+  border-radius: 50%; /* Rend l’avatar totalement rond */
+  width: 10rem; /* Largeur = 10x la taille de la racine */
+  height: 10rem; /* Hauteur = 10x la taille de la racine */
+}
+
+/* Cible la balise <cite> dans card-quote dans la carte testimonial */
+.card-testimonial .card-quote cite {
+  display: block; /* Affiche la citation comme un bloc (nouvelle ligne) */
+  padding-top: 1rem; /* Ajoute un espace en haut de 1rem */
+  color: var(--color-primary); /* Texte coloré avec la couleur principale */
+}

@@ -1,0 +1,59 @@
+/* Déclaration des variables globales */
+:root {
+  --section-tagline-margin: 0;            /* Supprime la marge pour les sous-titres */
+}
+
+/* Supprime les marges sur les sous-titres de section */
+.section-tagline {
+  margin: var(--section-tagline-margin);
+}
+
+/* Cible tous les <ul> avec la classe .row */
+ul.row {
+  margin: 0;           /* Supprime les marges */
+  padding: 0;          /* Supprime les paddings */
+  list-style: none;    /* Supprime les puces */
+}
+
+/* Cible toutes les classes qui commencent par "col-" */
+[class^="col-"] {
+  float: left;         /* Flotte à gauche */
+  padding: 0.5rem;     /* Espace intérieur */
+}
+
+/* Colonne d’un tiers */
+.col-1-3 {
+  width: 33.33%;       /* Largeur d’un tiers */
+}
+
+/* Colonne de la moitié */
+.col-1-2 {
+  width: 50%;          /* Largeur d’un demi */
+}
+
+/* Texte du copyright dans le footer */
+.footer-copyright {
+  margin: 0;                           /* Pas de marges */
+  font-size: var(--font-size-small);   /* Petite taille de texte */
+  color: var(--text-color);            /* Couleur de texte définie globalement */
+}
+
+/* Aligne les listes du footer à droite */
+footer ul {
+  text-align: right;
+}
+
+/* Ajoute une ligne invisible après chaque .row */
+.row::after {
+  content: "";        /* Élément vide */
+  display: table;     /* Affichage en table */
+  clear: both;        /* Supprime les flottants */
+}
+
+/* SECTION AVEC LE THÈME SOMBRE */
+/* Cible les éléments ayant l'attribut data-section-theme="dark" */
+[data-section-theme="dark"] {
+  --text-color: var(--color-white);             /* Texte blanc */
+  --section-title-color: var(--color-white);    /* Titre en blanc */
+  background-color: var(--color-black);         /* Fond noir */
+}

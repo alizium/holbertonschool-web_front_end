@@ -1,0 +1,79 @@
+/* Importation des polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+
+/* Déclaration des variables CSS globales */
+:root {
+  /* Polices */
+  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Couleurs */
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+
+  /* Tailles de police */
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.3rem;
+  --font-size-xx-large: 4.8rem;
+
+  /* Épaisseurs de texte */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Hauteurs de lignes */
+  --line-height-small: 1.2;
+  --line-height-base: 1.5;
+  --line-height-big: 1.8;
+}
+
+/* Base pour les unités rem : 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+/* Style général du corps de la page */
+body {
+  font-family: var(--font-family-base);       /* Police principale du texte */
+  color: var(--text-color);                   /* Couleur du texte */
+  font-size: var(--font-size-medium);         /* Taille de police moyenne */
+  font-weight: var(--font-weight-regular);    /* Texte en poids normal */
+  line-height: var(--line-height-base);       /* Espacement standard entre les lignes */
+}
+
+/* Titres (h1 à h6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);      /* Police spéciale pour les titres */
+  font-weight: var(--font-weight-bold);       /* Titres en gras */
+}
+
+/* Cache les éléments de manière visuelle mais pas pour les lecteurs d’écran */
+.visually-hidden {
+  display: none;
+}
+
+/* Couleur pour les catégories de carte */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* Couleur pour le slogan des sections */
+.section-tagline {
+  color: var(--color-primary);
+}
+
+/* Style des liens */
+a {
+  color: var(--text-color);                  /* Applique la couleur du texte */
+  text-decoration: none;                     /* Supprime le soulignement des liens */
+}

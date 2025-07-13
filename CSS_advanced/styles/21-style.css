@@ -1,0 +1,52 @@
+/* Variables globales */
+:root {
+  --section-tagline-margin: 0;          /* Aucune marge pour les sous-titres */
+}
+
+/* Supprime les marges sur les sous-titres de section */
+.section-tagline {
+  margin: var(--section-tagline-margin);
+}
+
+/* Tous les <ul> avec la classe .row */
+ul.row {
+  margin: 0;               /* Supprime les marges externes */
+  padding: 0;              /* Supprime les paddings internes */
+  list-style: none;        /* Supprime les puces par défaut */
+}
+
+/* Sélectionne toutes les classes qui commencent par 'col-' */
+/* C'est un sélecteur d'attributs qui correspond aux classes de type col-1-2, col-1-3, etc. */
+[class^="col-"] {
+  float: left;         /* Fait flotter les colonnes à gauche */
+  padding: 0.5rem;     /* Ajoute un padding autour de chaque colonne */
+}
+
+/* Colonne prenant 1/3 de la largeur */
+.col-1-3 {
+  width: 33.33%;       /* Largeur spécifique de cette colonne */
+}
+
+/* Colonne prenant 1/2 de la largeur */
+.col-1-2 {
+  width: 50%;          /* Largeur spécifique de cette colonne */
+}
+
+/* Texte de copyright dans le footer */
+.footer-copyright {
+  margin: 0;                             /* Supprime les marges */
+  font-size: var(--font-size-small);     /* Police plus petite */
+  color: var(--text-color);              /* Couleur définie par variable */
+}
+
+/* Tous les <ul> dans le footer auront le texte aligné à droite */
+footer ul {
+  text-align: right;
+}
+
+/* Ajoute une ligne invisible après chaque .row pour forcer un retour à la ligne */
+.row::after {
+  content: "";        /* Élément virtuel vide */
+  display: table;     /* S'assure qu'il est rendu comme un bloc */
+  clear: both;        /* Empêche les éléments flottants de déborder */
+}

@@ -1,0 +1,35 @@
+/* Déclare toutes les variables de padding utilisées pour les sections */
+:root {
+  --section-padding: 5rem 0;             /* padding haut et bas : 5rem, gauche et droite : 0 */
+  --section-header-padding: 0 0 3rem;    /* padding bas : 3rem, les autres à 0 */
+  --section-body-padding: 0 0 3rem;      /* même logique */
+  --section-footer-padding: 3rem 0 0;    /* padding haut : 3rem */
+  --section-footer-align: center;        /* texte centré horizontalement */
+  --footer-padding: 5rem 0 1rem;         /* haut : 5rem, bas : 1rem */
+}
+
+/* Ajoute un espacement autour de chaque section entière */
+.section {
+  padding: var(--section-padding);
+}
+
+/* Ajoute un espacement spécifique à l'en-tête de section */
+.section-header {
+  padding: var(--section-header-padding);
+}
+
+/* Ajoute un espacement au corps de la section */
+.section-body {
+  padding: var(--section-body-padding);
+}
+
+/* Ajoute un espacement au pied de section + aligne le texte au centre */
+.section-footer {
+  padding: var(--section-footer-padding);
+  text-align: var(--section-footer-align);
+}
+
+/* Applique un espacement au footer du site */
+.footer {
+  padding: var(--footer-padding);
+}

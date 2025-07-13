@@ -1,0 +1,59 @@
+/* Positionne le conteneur principal des cartes de type "work" */
+.card-work .card-outer {
+  position: relative; /* Permet de positionner les éléments enfants en absolu */
+  overflow: hidden; /* Cache les débordements d'éléments internes */
+}
+
+/* Cible l'image à l'intérieur de card-image dans card-work */
+.card-work .card-image img {
+  height: 30rem; /* Donne une hauteur fixe à l'image */
+  width: 100%; /* Prend toute la largeur disponible */
+  object-fit: cover; /* Remplit sans déformer l'image */
+  vertical-align: bottom; /* Aligne l’image au bas de la boîte */
+}
+
+/* Cible le bloc intérieur dans card-work */
+.card-work .card-inner {
+  position: absolute; /* Le place par rapport au parent en position relative */
+  top: -0.1rem; /* Décale légèrement vers le haut */
+  left: -0.1rem; /* Décale légèrement à gauche */
+  right: -0.1rem; /* Décale légèrement à droite */
+  z-index: 1; /* Place l’élément au-dessus des autres */
+}
+
+/* Quand on survole une carte de type "work", changer le fond du bloc intérieur */
+.card-work:hover .card-inner {
+  background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
+}
+
+/* Cible le titre dans card-work */
+.card-work .card-title {
+  text-align: center; /* Centre le texte horizontalement */
+  margin: 0; /* Supprime toutes les marges */
+  opacity: 0; /* Rends le titre invisible par défaut */
+  height: 100%; /* Prend toute la hauteur de son conteneur */
+  position: relative; /* Permet de positionner l’élément pseudo ::after */
+}
+
+/* Cible le lien dans le titre */
+.card-work .card-title a {
+  display: block; /* Fait du lien un bloc pour prendre tout l’espace */
+  text-decoration: none; /* Supprime le soulignement */
+  padding-top: 45%; /* Crée de l’espace au-dessus du texte */
+  position: relative; /* Nécessaire pour le ::after */
+}
+
+/* Pseudo-élément ::after du lien pour créer une couche de fond cliquable */
+.card-work .card-title a::after {
+  content: ""; /* Nécessaire pour que le pseudo-élément existe */
+  position: absolute; /* Positionne le pseudo-élément */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Quand on survole une carte, afficher le titre */
+.card-work:hover .card-title {
+  opacity: 1; /* Rend le titre visible au survol */
+}

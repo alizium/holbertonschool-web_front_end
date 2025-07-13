@@ -1,0 +1,34 @@
+/* Ajout des nouvelles variables personnalisées pour les boutons dans :root */
+:root {
+  --button-display: inline-block; /* Le bouton s'affiche comme un élément en ligne avec dimensions */
+  --button-padding: 1.5rem 3rem; /* Espace interne du bouton (haut/bas 1.5rem, gauche/droite 3rem) */
+  --button-border: 0.2rem solid var(--color-primary); /* Bordure fine avec la couleur principale */
+  --button-color: var(--color-black); /* Couleur du texte par défaut du bouton */
+  --button-text-decoration: none; /* Le texte du bouton ne doit pas être souligné */
+  --button-font-size: var(--font-size-large); /* Taille de police large */
+  --button-hover-color: var(--color-white); /* Couleur du texte quand on survole le bouton */
+  --button-hover-text-decoration: none; /* Pas de soulignement au survol */
+  --button-hover-background: var(--color-primary); /* Fond rouge (ou personnalisé) au survol */
+}
+
+/* Ajoute la variable spécifique au thème sombre */
+[data-section-theme="dark"] {
+  --button-color: var(--color-white); /* Dans le thème sombre, le texte du bouton est blanc */
+}
+
+/* Style par défaut du bouton */
+.button {
+  display: var(--button-display); /* S'affiche en bloc en ligne */
+  padding: var(--button-padding); /* Espace intérieur autour du texte */
+  border: var(--button-border); /* Bordure autour du bouton */
+  font-size: var(--button-font-size); /* Taille de texte */
+  color: var(--button-color); /* Couleur du texte */
+  text-decoration: var(--button-text-decoration); /* Pas de soulignement */
+}
+
+/* Style du bouton au survol */
+.button:hover {
+  color: var(--button-hover-color); /* Texte devient blanc */
+  text-decoration: var(--button-hover-text-decoration); /* Toujours pas de soulignement */
+  background-color: var(--button-hover-background); /* Fond coloré (rouge) */
+}

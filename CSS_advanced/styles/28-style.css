@@ -1,0 +1,27 @@
+:root {
+  /* Déclare les variables CSS pour le header */
+  --header-padding: 4rem 0 0; /* padding haut : 4rem, autres : 0 */
+  --header-logo-position: relative; /* position de base pour que le lien puisse se placer par rapport à lui */
+  --header-logo-link-display: inline-block; /* rend le lien comme un bloc dans une ligne */
+  --header-logo-link-position: absolute; /* permet de placer précisément le lien */
+  --header-logo-link-top: -1rem; /* positionne le lien 1rem au-dessus du haut de son parent */
+  --header-logo-link-left: 0; /* aligne le lien à gauche */
+}
+
+/* Sélectionne la balise <header> et applique du padding */
+header {
+  padding: var(--header-padding); /* utilise la variable header-padding */
+}
+
+/* Sélectionne l’élément avec la classe .header-logo */
+.header-logo {
+  position: var(--header-logo-position); /* positionne le logo en relatif */
+}
+
+/* Sélectionne les liens à l'intérieur de .header-logo */
+.header-logo a {
+  display: var(--header-logo-link-display); /* rend le lien comme un bloc en ligne */
+  position: var(--header-logo-link-position); /* le place absolument dans son parent */
+  top: var(--header-logo-link-top); /* position verticale depuis le haut */
+  left: var(--header-logo-link-left); /* position horizontale depuis la gauche */
+}

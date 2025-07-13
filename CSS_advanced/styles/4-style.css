@@ -1,0 +1,52 @@
+/* Déclaration du bloc racine : ici on place nos variables globales */
+:root {
+  /* Police de base utilisée pour le texte normal (par défaut pour body) */
+  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Police utilisée pour les titres (h1 à h6) */
+  --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Variables de couleurs déjà utilisées dans les fichiers précédents */
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+}
+
+/* Applique la police de base au corps de la page (texte général) */
+body {
+  font-family: var(--font-family-base);
+  color: var(--text-color); /* On continue à utiliser la couleur du texte via la variable */
+}
+
+/* Applique la police spéciale aux titres h1 à h6 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
+}
+
+/* Cache visuellement les éléments destinés uniquement aux lecteurs d’écran */
+.visually-hidden {
+  display: none;
+}
+
+/* Applique la couleur principale à la catégorie de la carte */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* Applique aussi la couleur principale au slogan de la section */
+.section-tagline {
+  color: var(--color-primary);
+}
+
+/* Applique la couleur du texte à tous les liens */
+a {
+  color: var(--text-color);
+}

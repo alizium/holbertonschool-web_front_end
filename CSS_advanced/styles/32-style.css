@@ -1,0 +1,32 @@
+/* Variables pour les transitions */
+:root {
+  --transition-duration: 0.3s; /* Durée de la transition */
+  --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01); /* Courbe d'accélération personnalisée */
+}
+
+/* Zoom avant sur l'image au survol de la carte */
+.card-work:hover .card-image {
+  transform: scale(1.2); /* Zoom x1.2 sur l’image */
+  transition: var(--transition-duration) var(--transition-cubic-bezier); /* Animation fluide */
+}
+
+/* Zoom arrière sur l'encadré au survol */
+.card-work:hover .card-outer {
+  transform: scale(0.95); /* Réduction de la taille de l'encadré */
+}
+
+/* Appliquer l’animation à .card-inner */
+.card-work .card-inner {
+  transition: var(--transition-duration) var(--transition-cubic-bezier); /* Transition fluide */
+}
+
+/* Animation de soulignement sur les liens du menu */
+.nav .nav-link::before {
+  transition: var(--transition-duration) var(--transition-cubic-bezier); /* Transition sur la ligne */
+}
+
+/* Animation sur les boutons au survol */
+.button:hover {
+  transition-duration: var(--transition-duration); /* Durée de l'effet */
+  transition-property: color, background-color; /* Propriétés concernées par l’animation */
+}

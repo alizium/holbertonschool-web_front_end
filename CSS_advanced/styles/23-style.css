@@ -1,0 +1,73 @@
+/* Déclaration de variables globales */
+:root {
+  --section-tagline-margin: 0; /* Supprime la marge des sous-titres */
+}
+
+/* Supprime les marges des sous-titres */
+.section-tagline {
+  margin: var(--section-tagline-margin);
+}
+
+/* Supprime les marges et styles de base des listes en ligne */
+ul.row {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Cible toutes les classes qui commencent par "col-" */
+[class^="col-"] {
+  float: left;       /* Aligne les colonnes à gauche */
+  padding: 0.5rem;   /* Espacement intérieur */
+}
+
+/* Définit la largeur d’une colonne en tiers */
+.col-1-3 {
+  width: 33.33%;
+}
+
+/* Définit la largeur d’une colonne en moitié */
+.col-1-2 {
+  width: 50%;
+}
+
+/* Style pour le texte de copyright du footer */
+.footer-copyright {
+  margin: 0;
+  font-size: var(--font-size-small); /* Utilise la petite taille de texte */
+  color: var(--text-color);          /* Utilise la couleur du texte courant */
+}
+
+/* Aligne les listes dans le footer à droite */
+footer ul {
+  text-align: right;
+}
+
+/* Ajoute une ligne virtuelle après chaque ligne .row pour casser les flottants */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* THÈME SOMBRE : change les variables si data-section-theme est "dark" */
+[data-section-theme="dark"] {
+  --text-color: var(--color-white);              /* Texte blanc */
+  --section-title-color: var(--color-white);     /* Titre blanc */
+  background-color: var(--color-black);          /* Fond noir */
+}
+
+/* Cible le footer-address (adresse dans le pied de page) */
+.footer-address {
+  color: var(--text-color); /* Applique la couleur actuelle du texte (peut être blanc en thème sombre) */
+}
+
+/* Style de base pour les liens sociaux */
+.social-link {
+  display: block; /* Rend chaque lien social comme un bloc (prend toute la ligne) */
+}
+
+/* Cible les icônes SVG à l'intérieur des liens sociaux */
+.social-link svg {
+  fill: var(--text-color); /* Colorie l'intérieur des SVG avec la couleur actuelle du texte */
+}

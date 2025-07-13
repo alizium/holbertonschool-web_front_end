@@ -1,0 +1,78 @@
+/* Importation des polices Google Fonts utilisées dans le projet */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+
+/* Toutes les variables CSS globales sont définies ici */
+:root {
+  /* Polices du projet */
+  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Couleurs principales */
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+
+  /* Tailles de texte */
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.3rem;
+  --font-size-xx-large: 4.8rem;
+
+  /* Poids des polices */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Hauteurs de ligne personnalisées */
+  --line-height-small: 1.2; /* Ligne très compacte */
+  --line-height-base: 1.5;  /* Ligne avec un espacement classique (lisible) */
+  --line-height-big: 1.8;   /* Ligne très aérée */
+}
+
+/* Taille de base pour le rem : 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+/* Style général du corps de la page */
+body {
+  font-family: var(--font-family-base);        /* Police principale du texte */
+  color: var(--text-color);                    /* Couleur principale du texte */
+  font-size: var(--font-size-medium);          /* Taille standard */
+  font-weight: var(--font-weight-regular);     /* Texte non gras */
+  line-height: var(--line-height-base);        /* Espacement entre les lignes (lisibilité) */
+}
+
+/* Titres du site (h1 à h6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);       /* Police spéciale pour les titres */
+  font-weight: var(--font-weight-bold);        /* Titres en gras */
+}
+
+/* Cache certains éléments visuellement mais les laisse accessibles aux lecteurs d’écran */
+.visually-hidden {
+  display: none;
+}
+
+/* Couleur des catégories de cartes */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* Couleur des slogans de sections */
+.section-tagline {
+  color: var(--color-primary);
+}
+
+/* Couleur des liens */
+a {
+  color: var(--text-color);
+}

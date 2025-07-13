@@ -1,0 +1,74 @@
+/* Importation des polices Google Fonts depuis l'API (Raleway et Open Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+
+/* Déclaration de toutes les variables CSS globales dans :root */
+:root {
+  /* Police du texte de base : on ajoute "Open Sans" en premier */
+  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Police des titres : on ajoute "Raleway" en premier */
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Couleurs utilisées dans le site */
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+
+  /* Tailles de texte */
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.3rem;
+  --font-size-xx-large: 4.8rem;
+
+  /* Poids (épaisseurs) du texte */
+  --font-weight-regular: 400; /* Texte classique */
+  --font-weight-bold: 700;    /* Texte en gras */
+}
+
+/* Base de calcul des tailles relatives → 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+/* Style général du corps de la page */
+body {
+  font-family: var(--font-family-base);       /* Police du corps du texte */
+  color: var(--text-color);                   /* Couleur du texte */
+  font-size: var(--font-size-medium);         /* Taille standard */
+  font-weight: var(--font-weight-regular);    /* Texte en normal */
+}
+
+/* Titres (h1 à h6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);      /* Police spéciale pour les titres */
+  font-weight: var(--font-weight-bold);       /* Titres en gras */
+}
+
+/* Cache les éléments sans importance visuelle */
+.visually-hidden {
+  display: none;
+}
+
+/* Couleur des catégories de carte */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* Couleur des slogans de section */
+.section-tagline {
+  color: var(--color-primary);
+}
+
+/* Couleur des liens */
+a {
+  color: var(--text-color);
+}

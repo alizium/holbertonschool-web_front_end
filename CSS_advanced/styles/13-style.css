@@ -1,0 +1,20 @@
+/* Cible seulement les balises <a> qui ont un lien (href) */
+a[href] {
+  color: var(--text-color);           /* Applique la couleur du texte */
+  text-decoration: none;              /* Supprime le soulignement de base */
+}
+
+/* Cible les liens déjà visités */
+a[href]:visited {
+  font-style: italic;                 /* Met le texte en italique */
+}
+
+/* Cible les liens quand la souris passe dessus */
+a[href]:hover {
+  text-decoration: underline;         /* Ajoute un soulignement */
+}
+
+/* Cible les liens au moment du clic */
+a[href]:active {
+  background-color: var(--color-light-grey);  /* Change le fond en gris clair */
+}

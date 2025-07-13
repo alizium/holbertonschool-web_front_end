@@ -1,0 +1,15 @@
+/* Déclare qu’on positionne manuellement les éléments internes à card-quote */
+.card-testimonial .card-quote {
+  position: relative; /* Nécessaire pour positionner le ::before */
+}
+
+/* Ajoute une grande ouverture de guillemet “ en arrière-plan */
+.card-testimonial .card-quote::before {
+  content: "\201C"; /* Code unicode pour le guillemet ouvrant “ */
+  position: absolute; /* Permet de le placer librement dans card-quote */
+  top: -4.5rem; /* Le place au-dessus du contenu */
+  left: -1rem; /* Le décale légèrement vers la gauche */
+  color: #efeded; /* Couleur gris très clair */
+  font-size: 10rem; /* Très grand guillemet */
+  z-index: -1; /* L’envoie derrière le texte principal */
+}

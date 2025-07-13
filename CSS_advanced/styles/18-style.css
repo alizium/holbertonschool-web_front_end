@@ -1,0 +1,44 @@
+/* Déclare les variables spécifiques à la navigation */
+:root {
+  --nav-item-font-family: var(--font-family-title);        /* Utilise la même police que les titres */
+  --nav-item-font-weight: var(--font-weight-bold);         /* Texte en gras */
+  --nav-item-font-size: var(--font-size-medium);           /* Taille de police moyenne */
+  --nav-item-letter-spacing: 0.4rem;                       /* Espacement entre lettres : 4% de 10px (racine) */
+  --nav-item-display: inline-block;                        /* Affiche les éléments en ligne avec propriétés de bloc */
+  --nav-item-margin: 3rem 0 0 0;                           /* Marge en bas uniquement */
+  --nav-item-link-hover: var(--color-primary);             /* Couleur de texte au survol */
+}
+
+/* Fait flotter le menu à droite */
+.navbar-menu {
+  float: right;
+}
+
+/* Supprime les marges/paddings du <nav>, et centre le texte */
+nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;      /* Supprime les puces des listes */
+  text-align: center;    /* Centre le contenu */
+}
+
+/* Style chaque élément de la liste de navigation */
+nav .nav-item {
+  font-family: var(--nav-item-font-family);         /* Police des titres */
+  font-weight: var(--nav-item-font-weight);         /* En gras */
+  font-size: var(--nav-item-font-size);             /* Taille moyenne */
+  letter-spacing: var(--nav-item-letter-spacing);   /* Espacement entre lettres */
+  display: var(--nav-item-display);                 /* Affichage en ligne-bloc */
+  margin: var(--nav-item-margin);                   /* Marge uniquement en bas */
+}
+
+/* Style des liens dans les éléments de navigation */
+nav .nav-link {
+  display: block;                        /* Chaque lien occupe toute la largeur de son conteneur */
+  padding: 0.5rem 1rem;                  /* Haut/Bas : 0.5rem, Gauche/Droite : 1rem */
+}
+
+/* Changement de couleur au survol des liens */
+nav .nav-link:hover {
+  color: var(--nav-item-link-hover);
+}

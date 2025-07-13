@@ -1,0 +1,50 @@
+/* Variables globales */
+:root {
+  --section-tagline-margin: 0;         /* Aucune marge pour les sous-titres de section */
+}
+
+/* Supprime les marges sur les sous-titres de section */
+.section-tagline {
+  margin: var(--section-tagline-margin);
+}
+
+/* Tous les <ul> avec la classe .row */
+ul.row {
+  margin: 0;               /* Supprime les marges externes */
+  padding: 0;              /* Supprime les paddings internes */
+  list-style: none;        /* Supprime les puces par défaut */
+}
+
+/* Colonne prenant 1/3 de la largeur du parent */
+.col-1-3 {
+  width: 33.33%;           /* Largeur de 33.33% */
+  float: left;             /* Flotte à gauche */
+  padding: 0.5rem;         /* Padding uniforme */
+}
+
+/* Colonne prenant 1/2 de la largeur du parent */
+.col-1-2 {
+  width: 50%;              /* Largeur de 50% */
+  float: left;             /* Flotte à gauche */
+  padding: 0.5rem;         /* Padding uniforme */
+}
+
+/* Texte de copyright dans le footer */
+.footer-copyright {
+  margin: 0;                             /* Aucune marge */
+  font-size: var(--font-size-small);     /* Police petite */
+  color: var(--text-color);              /* Couleur du texte */
+}
+
+/* Tous les <ul> dans le footer auront le texte aligné à droite */
+footer ul {
+  text-align: right;
+}
+
+/* Ajoute une ligne invisible après chaque .row pour forcer un retour à la ligne */
+/* Cela évite les problèmes d'affichage avec les éléments flottants */
+.row::after {
+  content: "";        /* Élément virtuel, vide */
+  display: table;     /* Prend de la place pour agir comme un bloc */
+  clear: both;        /* Évite que les éléments flottants débordent */
+}

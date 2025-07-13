@@ -1,0 +1,62 @@
+/* On crée des variables globales de taille de police dans :root */
+:root {
+  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Police de base pour le texte */
+  --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Police utilisée pour les titres */
+
+  --color-primary: #d73953; /* Couleur principale */
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black); /* Texte par défaut en noir */
+
+  /* Variables de taille de texte en rem (relatif à la taille de base) */
+  --font-size-small: 1.2rem;     /* Petite taille de texte */
+  --font-size-medium: 1.6rem;    /* Taille normale de texte */
+  --font-size-large: 1.8rem;     /* Texte un peu plus grand */
+  --font-size-x-large: 2.3rem;   /* Très grand texte */
+  --font-size-xx-large: 4.8rem;  /* Taille énorme (gros titres) */
+}
+
+/* On définit la taille de base du html à 62.5% → 1rem = 10px */
+html {
+  font-size: 62.5%;
+  /* Cela facilite les calculs : 1.6rem = 16px, 2.3rem = 23px etc. */
+}
+
+/* Corps du document : police de base et taille moyenne */
+body {
+  font-family: var(--font-family-base);      /* On applique la police par défaut */
+  color: var(--text-color);                  /* Couleur du texte par défaut */
+  font-size: var(--font-size-medium);        /* Taille normale définie via la variable */
+}
+
+/* Tous les niveaux de titres utilisent la police spéciale */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title); /* Police différente pour donner du style aux titres */
+}
+
+/* Éléments visuellement cachés (accessibilité) */
+.visually-hidden {
+  display: none;
+}
+
+/* Catégories des cartes → couleur principale */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* Slogan de section → couleur principale aussi */
+.section-tagline {
+  color: var(--color-primary);
+}
+
+/* Tous les liens ont la même couleur que le texte */
+a {
+  color: var(--text-color);
+}

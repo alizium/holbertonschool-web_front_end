@@ -1,0 +1,41 @@
+:root {
+  /* Variables déjà présentes dans les fichiers précédents */
+  --color-primary: #d73953;
+  --color-white: #ffffff;
+
+  /* Mise à jour de la couleur au survol des liens de navigation */
+  --nav-item-link-hover: var(--color-white); /* Texte en blanc au survol */
+}
+
+/* Header */
+header {
+  padding: var(--header-padding);
+}
+
+.header-logo {
+  position: var(--header-logo-position);
+}
+
+.header-logo a {
+  display: var(--header-logo-link-display);
+  position: var(--header-logo-link-position);
+  top: var(--header-logo-link-top);
+  left: var(--header-logo-link-left);
+}
+
+/* Ajout de l'effet sur les liens de navigation avec un pseudo-élément */
+nav .nav-link::before {
+  content: ""; /* Nécessaire pour afficher un pseudo-élément */
+  position: absolute; /* Positionne l'élément par rapport à son parent */
+  top: 0; /* Positionne en haut */
+  left: 0; /* Positionne à gauche */
+  background-color: var(--color-white); /* Couleur de fond blanche par défaut */
+  width: 0; /* Largeur nulle au départ (invisible) */
+  height: 0.2rem; /* Hauteur de 20% de 1rem = 0.2rem */
+}
+
+/* Quand on survole l’élément parent nav-item, le ::before s’anime */
+nav .nav-item:hover .nav-link::before {
+  background-color: var(--color-primary); /* Devient rouge primaire au survol */
+  width: 100%; /* Barre visible en pleine largeur */
+}

@@ -1,0 +1,129 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* (Collé ici tout ton normalize.css que tu as déjà inséré) */
+
+/* ---------------------------------------- */
+/* === Variables CSS personnalisées === */
+/* ---------------------------------------- */
+
+:root {
+  /* Couleurs principales */
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+
+  /* Couleurs pour le texte */
+  --text-color: var(--color-black);
+
+  /* Polices */
+  --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Tailles de police */
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.3rem;
+  --font-size-xx-large: 4.8rem;
+
+  /* Graisses de police */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Hauteurs de ligne */
+  --line-height-small: 1.2;
+  --line-height-base: 1.5;
+  --line-height-big: 1.8;
+
+  /* Alignements et transformations */
+  --section-header-align: center;
+  --section-tagline-transform: uppercase;
+  --section-title-margin: 0;
+  --section-title-color: var(--color-black);
+}
+
+/* ---------------------------------------- */
+/* === HTML global === */
+/* ---------------------------------------- */
+
+/* Réduit la taille des polices dans HTML pour faciliter les rems */
+html {
+  font-size: 62.5%;
+}
+
+/* Style global du body */
+body {
+  font-family: var(--font-family-base); /* police de base */
+  font-size: var(--font-size-medium); /* taille de texte standard */
+  font-weight: var(--font-weight-regular); /* poids régulier */
+  line-height: var(--line-height-base); /* interligne standard */
+  color: var(--text-color); /* couleur du texte */
+}
+
+/* Lien avec href uniquement */
+a[href] {
+  color: var(--text-color);
+  text-decoration: none; /* enlève les soulignements */
+}
+
+/* Lien déjà visité */
+a:visited {
+  font-style: italic;
+}
+
+/*  Lien au survol */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lien actif (cliqué) */
+a:active {
+  background-color: var(--color-light-grey);
+}
+
+/* ---------------------------------------- */
+/* === Titres === */
+/* ---------------------------------------- */
+
+/* Tous les titres de h1 à h6 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-title); /* police des titres */
+  font-weight: var(--font-weight-bold); /* en gras */
+}
+
+/* ---------------------------------------- */
+/* === Classes spécifiques === */
+/* ---------------------------------------- */
+
+/* Cache totalement les éléments */
+.visually-hidden {
+  display: none;
+}
+
+/* 🏷️ Catégorie de carte */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* Slogan de section */
+.section-tagline {
+  color: var(--color-primary);
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-bold);
+  text-transform: var(--section-tagline-transform);
+}
+
+/* En-tête de section */
+.section-header {
+  text-align: var(--section-header-align);
+}
+
+/* Titre de section */
+.section-title {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-xx-large);
+  font-weight: var(--font-weight-bold);
+  margin: var(--section-title-margin);
+  color: var(--section-title-color);
+}

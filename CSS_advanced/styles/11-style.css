@@ -1,0 +1,88 @@
+/* Importe les polices Open Sans et Raleway depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+
+/* Déclaration de toutes les variables globales dans :root */
+:root {
+  /* Polices */
+  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Couleurs */
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+
+  /* Tailles de police */
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.3rem;
+  --font-size-xx-large: 4.8rem;
+
+  /* Épaisseurs de texte */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Hauteur des lignes */
+  --line-height-small: 1.2;
+  --line-height-base: 1.5;
+  --line-height-big: 1.8;
+
+  /* Alignement des titres de section */
+  --section-header-align: center;
+
+  /* ➕ Transformation de texte pour le slogan des sections (tout en majuscules) */
+  --section-tagline-transform: uppercase;
+}
+
+/* Base de conversion rem : 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+/* Style global de la page */
+body {
+  font-family: var(--font-family-base);         /* Police par défaut du texte */
+  color: var(--text-color);                     /* Couleur par défaut */
+  font-size: var(--font-size-medium);           /* Taille de police moyenne */
+  font-weight: var(--font-weight-regular);      /* Épaisseur normale */
+  line-height: var(--line-height-base);         /* Hauteur de ligne par défaut */
+}
+
+/* Titres h1 à h6 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-title);        /* Police des titres */
+  font-weight: var(--font-weight-bold);         /* Titres en gras */
+}
+
+/* Cache les éléments visuellement */
+.visually-hidden {
+  display: none;
+}
+
+/* Aligne les titres de section horizontalement au centre */
+.section-header {
+  text-align: var(--section-header-align);
+}
+
+/* Catégories des cartes colorées en rose */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* 💡 Style du slogan des sections */
+.section-tagline {
+  font-family: var(--font-family-title);           /* Police spéciale pour le slogan */
+  text-transform: var(--section-tagline-transform);/* Transformation du texte en majuscules */
+  font-weight: var(--font-weight-bold);            /* Slogan en gras */
+  color: var(--color-primary);                     /* Couleur principale */
+}
+
+/* Style des liens */
+a {
+  color: var(--text-color);                        /* Couleur des liens */
+  text-decoration: none;                           /* Enlève le soulignement */
+}
